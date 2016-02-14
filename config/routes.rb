@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'items/:id/edit' => 'items#edit'
   get '/items/:id' => 'items#show', as: :item
   patch '/items/:id' => 'items#update'
+  delete 'items/:id' => 'items#destroy'
   post '/items' => 'items#create'
 
 
