@@ -4,7 +4,7 @@
 <% @items.each do |item| %>
   <li>
       <%= link_to item.name, item_path(item.id) %>
-      <%= link_to '削除する', item_path(item.id), method: :delete %>
+      <%= link_to '削除する', item_path(item.id), method: :delete, data: { confirm: '削除しますか？' } %>
   </li>
 <% end %>
 </ul>

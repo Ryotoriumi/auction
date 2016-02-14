@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    validates
     @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_url

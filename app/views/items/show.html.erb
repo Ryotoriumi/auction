@@ -14,4 +14,5 @@
   <b>電子メール：<%= @item.email %></b>
 </p>
 
-<%= link_to '削除する', item_path(@item), method: :delete %>
+<%= link_to '一覧に戻る', items_path %>
+<%= link_to '削除する', item_path(@item), method: :delete, data: { confirm: '削除しますか？' } %>
